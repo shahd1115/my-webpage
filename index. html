@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            color: black;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+        #msg1 { color: red; }
+        #msg2 { color: blue; }
+        #msg3 { color: green; }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Webpage</h1>
+
+    <p id="msg1">Welcome to my page!</p>
+    <p id="msg2">My name is Shahd Shrief.</p>
+    <p id="msg3">Wish you all the best!</p>
+
+    <button onclick="showMessage()">Click to Show</button>
+
+    <script>
+        let count = 0;
+        function showMessage() {
+            count++;
+            if (count == 1) {
+                document.getElementById("msg1").style.display = "block";
+            } else if (count == 2) {
+                document.getElementById("msg2").style.display = "block";
+            } else if (count == 3) {
+                document.getElementById("msg3").style.display = "block";
+            } else {
+                alert("All messages are shown!");
+            }
+        }
+    </script>
+
+</body>
+</html>
